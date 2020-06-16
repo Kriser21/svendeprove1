@@ -41,10 +41,9 @@ nav ul li {
 .events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: ()[1fr];
-      grid-template-rows: repeat(1fr);
-  grid-gap: 10px;
+  -ms-grid-columns: 380px 380px 380px;
+      grid-template-columns: 380px 380px 380px;
+  -ms-grid-rows: ()[129px];
+      grid-template-rows: repeat(129px);
 }
 /*# sourceMappingURL=App.css.map */

@@ -38,4 +38,13 @@ return <> {test}</>;
 
 };
 
-export default Fetch;
+export default function Home(){
+    return(
+        <section>
+            Events
+            <div className="events">
+            <Fetch/>
+            </div>
+        </section>
+    );
+}

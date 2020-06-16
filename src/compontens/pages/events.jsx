@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
-
 const Fetch = () =>{
 const [apiData, setApiData]= useState (null);
 useEffect(() => {
@@ -24,7 +22,7 @@ console.log(apiData && apiData);
 
 let test =
 apiData&&
-    apiData.items.slice(0, 50).map((track) =>{
+    apiData.items.slice(0, 8).map((track) =>{
         console.log (track);
         return(
             <div key={track.id}>
