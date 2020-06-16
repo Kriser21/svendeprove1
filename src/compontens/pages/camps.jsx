@@ -26,7 +26,7 @@ apiData&&
         console.log (track);
         return(
             <div key={track.id}>
-            <img className="events" src={track.image} alt=""/>
+            <img  src={track.image} alt=""/>
             <p><span>{track.tite}</span>
             <button>SE MERE</button>
             </p>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
+
 const Fetch = () =>{
 const [apiData, setApiData]= useState (null);
 useEffect(() => {
@@ -20,22 +21,32 @@ redirect: 'follow',
 
 console.log(apiData && apiData);
 
+
 let test =
 apiData&&
     apiData.items.slice(0, 50).map((track) =>{
         console.log (track);
         return(
             <div key={track.id}>
-            <img className="events" src={track.image} alt=""/>
-            <p><span>{track.tite}</span>
-            <button>SE MERE</button>
+            <p> <span>{track.stage_name}</span>
+            <img src={track.image} alt=""/>
             </p>
             </div>
+            
          )
     });
 
-return <> {test}</>;
+    return <>{test}</>;
 
 };
 
-export default Fetch;
+export default function Home(){
+    return(
+        <section>
+            Events
+            <div className="events">
+            <Fetch/>
+            </div>
+        </section>
+    );
+}
