@@ -37,4 +37,10 @@ nav ul li {
   display: inline;
   margin: 5px;
 }
+
+.events {
+  display: -ms-grid;
+  display: grid;
+  width: 20%;
+}
 /*# sourceMappingURL=App.css.map */
