@@ -1,7 +1,40 @@
-p{
-  display: inline;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-nav img{
-  width: 10%;
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 150px 1fr;
+      grid-template-columns: 100px 150px 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
+
+nav img {
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+  width: 100%;
+}
+
+nav p {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+nav ul {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+nav ul li {
+  display: inline;
+  margin: 5px;
+}
+/*# sourceMappingURL=App.css.map */
