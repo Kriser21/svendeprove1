@@ -27,7 +27,7 @@ apiData&&
         return(
             <div key={track.id}>
             <img  src={track.image} alt=""/>
-            <p><span>{track.tite}</span>
+            <p><span>{track.name}</span>
             <button>SE MERE</button>
             </p>
             </div>
@@ -38,4 +38,13 @@ return <> {test}</>;
 
 };
 
-export default Fetch;
+export default function Home(){
+    return(
+        <section>
+            Events
+            <div className="events">
+            <Fetch/>
+            </div>
+        </section>
+    );
+}

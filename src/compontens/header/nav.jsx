@@ -29,7 +29,7 @@ export default function Nav(){
                    <Link to="/camps">Camps</Link>
                </li>
                <li>
-                   <Link to="/camps">Praktisk info</Link>
+                   <Link to="/paktiskinfo">Praktisk info</Link>
                </li>
                <li>
                    <Link to="/login">Login</Link>

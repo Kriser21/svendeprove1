@@ -22,7 +22,7 @@ console.log(apiData && apiData);
 
 let test =
 apiData&&
-    apiData.items.slice(0, 8).map((track) =>{
+    apiData.items.slice(0, 50).map((track) =>{
         console.log (track);
         return(
             <div key={track.id}>
@@ -41,7 +41,7 @@ apiData&&
 export default function Home(){
     return(
         <section>
-            Events
+            <h1>LINE-OP</h1>
             <div className="events">
             <Fetch/>
             </div>
