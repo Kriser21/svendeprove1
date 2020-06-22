@@ -28,6 +28,7 @@ apiData&&
             <div key={track.id}>
             <img  src={track.image} alt=""/>
             <p><span>{track.name}</span>
+            
             <button>SE MERE</button>
             </p>
             </div>
