@@ -1,48 +1,67 @@
+  
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Home from '../pages/home';
-import Events from '../pages/events';
-import Camps from '../pages/camps';
-import Praktiskinfo from '../pages/praktiskinfo';
-import Login from '../pages/login';
+import Home from '../page/home';
+import Nyheder from '../page/nyheder';
+import Events from '../page/events';
+import Camps from '../page/camps';
+import Praktis from '../page/praktiskInfo';
+import Login from '../page/login';
+import Program from '../page/program';
 import Logo from '../img/mediehuset-logo.png';
+import LineUpTest from '../page/examples/LineupTest';
 
+function Routertest() {
+  return (
+    <Router>
+      <header>
+        <nav>
+          <img src={Logo} alt="" />
+          <p>
+            <b>MEDIE</b>SUSET
+            <br />4 - 5 - 6 - 7 .JULI 2020
+          </p>
 
-
-export default function Nav(){
-    return(
-       < Router>
-        <div>
-            <nav>
-             
-                <img src= {Logo} alt=""/>
-                <p><b>MEDIE</b>SUSET <br/>4-5-6-7. JULI 2020</p>
-            <ul>
-                <button> <Link to="/købbillet"> KØB BILLET</Link></button>
-               <li>
-                   <Link to="/home">Nydheder</Link>
-               </li>
-               <li>
-                   <Link to="/eventes">Events</Link>
-               </li>
-               <li>
-                   <Link to="/camps">Camps</Link>
-               </li>
-               <li>
-                   <Link to="/paktiskinfo">Praktisk info</Link>
-               </li>
-               <li>
-                   <Link to="/login">Login</Link>
-               </li>
-            </ul>
-            </nav>
-
-        </div>
-        <Route path="/home" component={Home}/>
-        <Route path="/eventes" component={Events}/>
-        <Route path="/camps" component={Camps}/>
-        <Route path="/praktiskinfo" component={Praktiskinfo}/>
-        <Route path="/login" component={Login}/>
-        </Router>
-    )
-};
+          <ul>
+            <li className="list-inline-item">
+              <Link to="/">FORSIDE</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="/nyheder">NYHEDER</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link className="DropDown">
+                EVENTS
+                <div className="DropContent">
+                  <Link to="/program">PROGRAM</Link>
+                  <Link to="/events">LINE-UP</Link>
+                </div>
+              </Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="/camps">CAMPS</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="/praktis">PRAKTIKS INFO</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="/login">LOGIN</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="/lineuptest">LINE UP TEST</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <Route path="/" exact component={Home} />
+      <Route path="/nyheder" exact component={Nyheder} />
+      <Route path="/events" exact component={Events} />
+      <Route path="/camps" exact component={Camps} />
+      <Route path="/praktis" exact component={Praktis} />
+      <Route path="/login" exact component={Login} />
+      <Route path="/program" exact component={Program} />
+      <Route path="/lineuptest" exact component={LineUpTest} />
+    </Router>
+  );
+}
+export default Routertest;
