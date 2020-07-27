@@ -19,7 +19,6 @@ redirect: 'follow',
 });
 
 console.log(apiData && apiData);
-
 let test =
 apiData&&
     apiData.items.slice(0,  3 ).map((track) =>{
