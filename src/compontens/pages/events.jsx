@@ -19,25 +19,40 @@ const Fetch = () => {
   });
   console.log(apiData && apiData);
 
-  let test =
+  let fetch =
     apiData &&
     apiData.items.slice(0, 9).map((track) => {
+      let time = track.local_time.substr(11, 12)
+      // let alt = track.description.substr(0, 15)
       console.log(track);
       return (
-        <p key={track.id}>
-          <img src={track.image} alt="" />
-            <div className="test">
-                {track.title}
+        <p key={track.id} className="EventsContent">
+          <img src={track.image} alt={track.description} />
+            <div >
+               <h1>{track.title}</h1>
+                <br/>
+               kl. {time}
                 </div>
             </p>
       );
     });
-  return <>{test}</>;
+  return <>{fetch}</>;
 };
 export default function Home() {
   return (
-    <section className="events">
+    <section className="LineUpSection">
+      <h2>LINE-UP</h2>
+      <div className="filter">
+        <button>A-Å</button>
+        <button>RØD SCENE</button>
+        <button>BLÅ SCENE</button>
+        <button>GRØN SCENE</button>
+        <button>LILLA SCENE</button>
+        <button>FILTER</button>
+      </div>
+      <div className="LineUp">
         <Fetch />
+        </div>
     </section>
   );
 }
