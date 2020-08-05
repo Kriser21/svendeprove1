@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function praktiskinfo(){
+export default function Praktisk() {
     return(
         <div>
-hej
+            Praktisk Info
         </div>
     )
-}
+};

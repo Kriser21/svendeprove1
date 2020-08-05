@@ -1,0 +1,19 @@
+.events {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+div {
+  padding: 0 0.1rem;
+}
+
+.red {
+  background-color: "#fff";
+}
+
+.description {
+  white-space: pre-line;
+}
+/*# sourceMappingURL=LineUp.module.css.map */

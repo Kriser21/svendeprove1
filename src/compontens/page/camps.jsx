@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CampHero from '../img/camp-logo.jpg';
+
 const FetchCamp = () => {
   const [apiData, setApiData] = useState(null);
   useEffect(() => {
@@ -19,7 +19,7 @@ const FetchCamp = () => {
   });
   console.log(apiData && apiData);
 
-  let test =
+  let camps =
     apiData &&
     apiData.items.slice(0, 3).map((track) => {
       let SliceDescription = track.description.substr(0, 180)
@@ -35,13 +35,13 @@ const FetchCamp = () => {
         </div>
       );
     });
-  return <>{test}</>;
+  return <>{camps}</>;
 };
 export default function Camps() {
   return (
     <section className="camps">
       <div className="CampHero">
-        <img src={CampHero} alt="" />
+        {/* <img src={CampHero} alt="" /> */}
       </div>
       <p className="CampsTeaxt">
         <h1>CAMPS</h1>
