@@ -19,19 +19,36 @@ const Fetch = () => {
   });
   console.log('data', apiData && apiData);
 
-  let fetch =
+  let events =
     apiData &&
     apiData.items.slice(0, 9).map((track) => {
-      return ( <p>
-        console.log(track);
-      </p>
+      let SliceDescription = track.description.substr(0, 180)
+      console.log(track);
+      return (
+        <div key={track.name} className="EventsContent">
+          <img src={track.image} alt="" />
+          <p>{SliceDescription}</p>
+          <p>{track.stage_name}</p>
+          <p>{track.local_time}</p>
+          <p>{track.type_name}</p>
+        </div>
       );
     });
-
-  return <> 
-  {fetch}
-   </>;
+  return <>{events}</>;
 };
+//   let fetch =
+//     apiData &&
+//     apiData.items.slice(0, 9).map((track) => {
+//       return ( <p>
+//         console.log(track);
+//       </p>
+//       );
+//     });
+
+//   return <> 
+//   {fetch}
+//    </>;
+// };
 export default function Home() {
   return (
     <section className="LineUpSection">
