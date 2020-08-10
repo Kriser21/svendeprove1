@@ -74,8 +74,6 @@ nav {
   }
   .filter{
     grid-column: 1/4;
-    // margin-left: 10%;
-    // margin-right: 10%;
     margin: 0 10% 50px 10%;
     background-color: black;
     display: grid;
@@ -218,3 +216,16 @@ footer {
     }
   }
 }
+  .HomeContent {
+    display: grid;
+    position: relative;
+    margin: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }

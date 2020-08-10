@@ -20,28 +20,27 @@ redirect: 'follow',
 
 console.log(apiData && apiData);
 
-let test =
+let home =
 apiData&&
-    apiData.items.slice(0,  6 ).map((track) =>{
+    apiData.items.slice(0, 8 ).map((track) =>{
         console.log (track);
         return(
-            <div key={track.id}>
-            <img src={track.image} alt=""/>
-            <p><span>{track.tite}</span>
-            <button>SE MERE</button>
-            </p>
+            <div key={track.name} className="HomeContent">
+            <img src={track.image} alt="" />
+            <p>{track.title}</p>
+            <p>{track.teaser}</p>
+            <p>{track.local_time}</p>
             </div>
-         )
+         );
     });
 
-return <> {test}</>;
+return <> {home}</>;
 
 };
 
 export default function Home(){
     return(
         <section>
-            Events
             <div className="events">
             <Fetch/>
             </div>

@@ -21,7 +21,7 @@ const Fetch = () => {
 
   let events =
     apiData &&
-    apiData.items.slice(0, 9).map((track) => {
+    apiData.items.slice(0, 50).map((track) => {
       let SliceDescription = track.description.substr(0, 180)
       console.log(track);
       return (
@@ -36,19 +36,7 @@ const Fetch = () => {
     });
   return <>{events}</>;
 };
-//   let fetch =
-//     apiData &&
-//     apiData.items.slice(0, 9).map((track) => {
-//       return ( <p>
-//         console.log(track);
-//       </p>
-//       );
-//     });
 
-//   return <> 
-//   {fetch}
-//    </>;
-// };
 export default function Home() {
   return (
     <section className="LineUpSection">

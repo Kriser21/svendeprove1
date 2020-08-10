@@ -29,7 +29,6 @@ const FetchCamp = () => {
           <img src={track.image} alt="" />
           <h2> {track.name} </h2>
           <p>{SliceDescription}</p>
-          {/* <p>{track.description}</p> */}
       <p> <span>Samlet antal pladser: </span>{track.num_people} </p>
       <button>LÆS MERE</button>
         </div>
